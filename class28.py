@@ -18,3 +18,4 @@ for r in data['results']:
 	xlist.append(r['formatted_address'])
 	xlist.append(r['geometry']['location']['lng'])
 	xlist.append(r['geometry']['location']['lat'])
+	print(\
