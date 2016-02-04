@@ -11,14 +11,11 @@ myfile.close()
 
 print("type: ", mydict['type'])
 
-for i in mydict['geocoding']:
-	a = ['query']['text']
-	b = ['query'][str('size')]
-	c = ['query']['boundary.country']
+query_dict = mydict['geocoding']['query']
 
-print("text: ", a)
-print("size: ", b)
-print("boundary.country: ", c)
+print("text: ", query_dict['text'])
+print("size: ", query_dict['querySize'])
+print("boundary.country: ", query_dict['boundary.country'])
 
 
 	
