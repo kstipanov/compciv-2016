@@ -14,9 +14,8 @@ mydict = json.loads(txt)
 for result in mydict['results']:
 	mylist = []
 	mylist.append(result['formatted_address'])
-	for c in result['geometry']:
-		for c in result['location']:
-			mylist.append(str(result['lng']))
-			mylist.append(str(result['lat']))
+	loc = result['geometry']['location']
+	mylist.append(str(loc['lng']))
+	mylist.append(str(loc['lat']))
 	
 print(';'.join(mylist))
